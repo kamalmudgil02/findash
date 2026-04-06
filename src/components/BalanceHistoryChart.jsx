@@ -60,7 +60,7 @@ export default function BalanceHistoryChart() {
 
   return (
     <div
-      className="bg-surface border border-border rounded-xl p-6 relative w-full h-full flex flex-col min-h-[340px]"
+      className="bg-surface border border-border rounded-xl p-4 sm:p-6 relative w-full h-full flex flex-col min-h-[280px] sm:min-h-[340px]"
     >
       <style>{`
         @keyframes lineTooltipIn {

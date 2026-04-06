@@ -15,7 +15,7 @@ export default function SavingsGoal() {
 
 
   return (
-    <div className="bg-surface border border-border rounded-xl p-6 flex flex-col justify-between h-full">
+    <div className="bg-surface border border-border rounded-xl p-4 sm:p-6 flex flex-col justify-between h-full">
       <div>
         <div className="flex justify-between items-start mb-6">
           <h3 className="text-text-primary font-bold">Savings Goal</h3>

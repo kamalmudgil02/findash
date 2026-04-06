@@ -147,9 +147,9 @@ export default function HelpCenterPage() {
   );
 
   return (
-    <div className="flex flex-col gap-6 max-w-4xl pb-12">
+    <div className="flex flex-col gap-4 sm:gap-6 max-w-4xl pb-8 sm:pb-12">
       <div className="flex flex-col gap-2 mb-2">
-        <h2 className="text-3xl font-bold tracking-tight text-text-primary">Help Center</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">Help Center</h2>
         <p className="text-text-secondary text-sm">Find answers, read our policies, and get support.</p>
       </div>
 
@@ -213,7 +213,7 @@ export default function HelpCenterPage() {
       <div className="bg-surface border border-border rounded-xl p-6">
         <div className="flex justify-between items-center mb-6 flex-wrap gap-3">
           <h3 className="text-text-primary font-bold">Frequently Asked Questions ({FAQs.length})</h3>
-          <div className="relative w-64">
+          <div className="relative w-full sm:w-64">
             <Search className="w-4 h-4 text-text-secondary absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text" placeholder="Search FAQs..."
@@ -223,7 +223,7 @@ export default function HelpCenterPage() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[800px] overflow-y-auto pr-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-h-[600px] sm:max-h-[800px] overflow-y-auto pr-1 sm:pr-2">
           {filteredFaqs.map(faq => (
             <div key={faq.id} className="bg-background border border-border rounded-lg p-4">
               <p className="text-brand-blue font-bold text-sm mb-2">{faq.question}</p>

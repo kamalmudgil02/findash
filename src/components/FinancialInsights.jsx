@@ -57,14 +57,14 @@ export default function FinancialInsights() {
   ];
 
   return (
-    <div className="bg-surface border border-border rounded-xl p-6 h-full flex flex-col">
+    <div className="bg-surface border border-border rounded-xl p-4 sm:p-6 h-full flex flex-col">
       <div className="flex items-center gap-2 mb-4 text-brand-yellow">
         <Lightbulb className="w-5 h-5" />
         <h3 className="text-text-primary font-bold">Financial Insights</h3>
       </div>
 
       {/* Cards fill remaining height equally — no dead space */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 flex-1">
         {cards.map((card, i) => (
           <div key={i} className="bg-background rounded-lg p-4 border border-border flex flex-col gap-3 h-full">
             <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${card.iconBg}`}>

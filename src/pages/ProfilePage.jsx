@@ -79,12 +79,12 @@ export default function ProfilePage() {
   const set = (field) => (val) => setForm(prev => ({ ...prev, [field]: val }));
 
   return (
-    <div className="flex flex-col gap-6 max-w-2xl pb-12 mx-auto md:mx-0">
+    <div className="flex flex-col gap-4 sm:gap-6 max-w-2xl pb-8 sm:pb-12 mx-auto md:mx-0">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-text-primary">Your Profile</h2>
-          <p className="text-text-secondary text-sm mt-1">View and manage your personal information.</p>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">Your Profile</h2>
+          <p className="text-text-secondary text-xs sm:text-sm mt-1">View and manage your personal information.</p>
         </div>
         <div className="flex items-center gap-3">
           {saved && (
@@ -120,7 +120,7 @@ export default function ProfilePage() {
       </div>
 
       {/* Avatar Card */}
-      <div className="bg-surface border border-border rounded-xl p-8 flex flex-col items-center text-center relative overflow-hidden">
+      <div className="bg-surface border border-border rounded-xl p-6 sm:p-8 flex flex-col items-center text-center relative overflow-hidden">
         {/* Background gradient accent */}
         <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-br from-brand-blue/20 via-brand-purple/10 to-transparent" />
 

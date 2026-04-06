@@ -47,8 +47,8 @@ body {
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: var(--color-background);
@@ -59,4 +59,27 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-surface-hover);
+}
+
+/* Mobile sidebar slide-in animation */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive table cards on mobile */
+@media (max-width: 639px) {
+  /* Allow horizontal scroll for tables */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Prevent text overflow globally */
+* {
+  min-width: 0;
 }

@@ -26,11 +26,11 @@ export default function NotificationsPage() {
   const isAdmin = role === 'Admin';
 
   return (
-    <div className="flex flex-col gap-6 max-w-3xl pb-12">
+    <div className="flex flex-col gap-4 sm:gap-6 max-w-3xl pb-8 sm:pb-12">
       {/* Header */}
-      <div className="flex items-start justify-between flex-wrap gap-4">
+      <div className="flex flex-col sm:flex-row items-start sm:items-start justify-between gap-3 sm:gap-4">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-text-primary">Notifications</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">Notifications</h2>
           <p className="text-text-secondary text-sm mt-1">
             {unreadCount > 0 ? `${unreadCount} unread notification${unreadCount > 1 ? 's' : ''}` : 'All caught up!'}
           </p>

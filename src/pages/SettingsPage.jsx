@@ -139,13 +139,13 @@ export default function SettingsPage() {
   const selectClass = "bg-background border border-border rounded-lg px-3 py-1.5 text-text-primary text-sm focus:outline-none focus:border-brand-blue transition-colors cursor-pointer";
 
   return (
-    <div className="flex flex-col gap-6 max-w-3xl pb-12">
+    <div className="flex flex-col gap-4 sm:gap-6 max-w-3xl pb-8 sm:pb-12">
       {/* Toast */}
       {toast && (
         <div
-          style={{ position: 'fixed', bottom: 28, right: 28, zIndex: 999 }}
+          style={{ position: 'fixed', bottom: 16, left: 16, right: 16, zIndex: 999 }}
           className={clsx(
-            'flex items-center gap-3 px-5 py-3 rounded-xl shadow-2xl text-sm font-medium border',
+            'flex items-center gap-3 px-4 sm:px-5 py-3 rounded-xl shadow-2xl text-sm font-medium border sm:left-auto sm:right-7 sm:bottom-7',
             toast.type === 'success' && 'bg-brand-green/10 border-brand-green/40 text-brand-green',
             toast.type === 'warn'    && 'bg-brand-yellow/10 border-brand-yellow/40 text-brand-yellow',
             toast.type === 'info'   && 'bg-surface border-border text-text-primary',
@@ -158,10 +158,10 @@ export default function SettingsPage() {
         </div>
       )}
       {/* Header */}
-      <div className="flex items-center justify-between flex-wrap gap-3">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-text-primary">Settings</h2>
-          <p className="text-text-secondary text-sm mt-1">Changes only apply after clicking Save.</p>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">Settings</h2>
+          <p className="text-text-secondary text-xs sm:text-sm mt-1">Changes only apply after clicking Save.</p>
         </div>
         <div className="flex items-center gap-3">
           {saved && (

@@ -64,11 +64,11 @@ export default function RecentTransactions({ role }) {
   return (
     <>
       <div className="bg-surface border border-border rounded-xl overflow-hidden">
-        <div className="p-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-border">
-          <h3 className="text-text-primary font-bold text-lg">Recent Transactions</h3>
+        <div className="p-4 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 border-b border-border">
+          <h3 className="text-text-primary font-bold text-base sm:text-lg">Recent Transactions</h3>
         </div>
 
-        <div className="p-6 flex flex-wrap items-center justify-between gap-4 border-b border-border bg-background">
+        <div className="p-3 sm:p-6 flex flex-wrap items-center justify-between gap-3 sm:gap-4 border-b border-border bg-background">
           <div className="flex items-center gap-3">
             <div className="relative">
               <select 

@@ -61,7 +61,7 @@ export default function ExpenseCategoryChart() {
   }, []);
 
   return (
-    <div className="bg-surface border border-border rounded-xl p-6" style={{ height: '100%', minHeight: 340, display: 'flex', flexDirection: 'column' }}>
+    <div className="bg-surface border border-border rounded-xl p-4 sm:p-6" style={{ height: '100%', minHeight: 280, display: 'flex', flexDirection: 'column' }}>
       {/* keyframe uses CSS custom props per element — works in all modern browsers */}
       <style>{`
         @keyframes segTooltipIn {

@@ -44,19 +44,19 @@ export default function SummaryCards() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
       {cards.map((card, i) => (
-        <div key={i} className="bg-surface border border-border rounded-xl p-6 flex flex-col gap-4 relative overflow-hidden group">
+        <div key={i} className="bg-surface border border-border rounded-xl p-4 sm:p-6 flex flex-col gap-3 sm:gap-4 relative overflow-hidden group">
           <div className="flex justify-between items-start">
             <h3 className="text-text-secondary text-sm font-medium">{card.title}</h3>
-            <div className={clsx("w-10 h-10 rounded-full flex items-center justify-center transition-transform group-hover:scale-110", card.iconBg)}>
-              <card.icon className={clsx("w-5 h-5", card.iconColor)} />
+            <div className={clsx("w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-transform group-hover:scale-110", card.iconBg)}>
+              <card.icon className={clsx("w-4 h-4 sm:w-5 sm:h-5", card.iconColor)} />
             </div>
           </div>
           
           <div>
-            <div className="text-3xl font-bold text-text-primary mb-2">{card.amount}</div>
-            <div className="flex items-center gap-2 text-sm">
+            <div className="text-2xl sm:text-3xl font-bold text-text-primary mb-1 sm:mb-2">{card.amount}</div>
+            <div className="flex items-center gap-2 text-xs sm:text-sm">
               <span className={clsx("font-medium", card.isPositive ? "text-brand-green" : "text-brand-red")}>
                 {card.change}
               </span>

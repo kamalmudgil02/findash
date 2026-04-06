@@ -14,16 +14,18 @@ import HelpCenterPage from './pages/HelpCenterPage';
 import ProfilePage from './pages/ProfilePage';
 import NotificationsPage from './pages/NotificationsPage';
 import { useAppContext } from './context/AppContext';
+import { useState } from 'react';
 
 function DashboardLayout() {
   const { role, setRole } = useAppContext();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="flex h-screen bg-background text-text-primary overflow-hidden">
-      <Sidebar />
-      <div className="flex-1 flex flex-col h-screen overflow-hidden">
-        <Header role={role} setRole={setRole} />
-        <main className="flex-1 overflow-y-auto p-6 md:p-8">
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <div className="flex-1 flex flex-col h-screen overflow-hidden min-w-0">
+        <Header role={role} setRole={setRole} onMenuToggle={() => setSidebarOpen(v => !v)} />
+        <main className="flex-1 overflow-y-auto p-4 sm:p-6 md:p-8">
           <Routes>
             <Route path="/" element={<Dashboard role={role} />} />
             <Route path="/transactions" element={<TransactionsPage role={role} />} />
